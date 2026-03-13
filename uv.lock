@@ -23,6 +23,11 @@ dependencies = [
     { name = "watchdog" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "langgraph-cli" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = ">=0.135.1" },
@@ -36,6 +41,9 @@ requires-dist = [
     { name = "uvicorn", specifier = ">=0.41.0" },
     { name = "watchdog", specifier = ">=6.0.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "langgraph-cli", extras = ["inmem"], specifier = ">=0.1.54" }]
 
 [[package]]
 name = "aiohappyeyeballs"

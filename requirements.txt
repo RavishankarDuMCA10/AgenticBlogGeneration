@@ -8,3 +8,6 @@ uvicorn
 watchdog
 langgraph-cli[inmem]
 python-dotenv
+
+# Use below command to run langgraph using cli.
+# uvx --python 3.12 --from "langgraph-cli[inmem]" --with-editable . langgraph dev
