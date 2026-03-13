@@ -12,6 +12,7 @@ dependencies = [
     "langchain-groq>=1.1.2",
     "langgraph>=1.1.2",
     "langgraph-cli[inmem]>=0.1.54",
+    "python-dotenv>=1.2.2",
     "uvicorn>=0.41.0",
     "watchdog>=6.0.0",
 ]

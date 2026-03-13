@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 
 
 class Blog(BaseModel):
-    title = Field(description="The title of the blog post")
-    content = Field(description="The main content of the blog post")
+    title: str = Field(description="The title of the blog post")
+    content: str = Field(description="The main content of the blog post")
 
 
 class BlogState(TypedDict):

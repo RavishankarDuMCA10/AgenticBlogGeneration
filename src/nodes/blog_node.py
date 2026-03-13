@@ -18,6 +18,7 @@ class BlogNode:
             prompt = """
                     You are an expert blog content writer. Use Markdown formatting. Generate
                     a blog title for the {topic}. This title should be creative and SEO friendly.
+                    Provide title only and don't add description of title.
                     """
 
             system_message = prompt.format(topic=state["topic"])
@@ -37,4 +38,6 @@ class BlogNode:
 
             system_message = system_prompt.format(topic=state["topic"])
             response = self.llm.invoke(system_message)
-            return {"blog": {"title": state["blog"].title, "content": response.content}}
+            return {
+                "blog": {"title": state["blog"]["title"], "content": response.content}
+            }
